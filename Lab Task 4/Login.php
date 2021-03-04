@@ -2,27 +2,10 @@
 <!DOCTYPE html> 
 <html> 
 <head>
-      <style>
-     .error {color: #FF0000;}
-
-      header {
-  background-color: #99d9ff;
-  padding: 30px;
-  text-align: center;
-  font-size: 20px;
-  color: white;
-
-} 
-  footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-     </style>
+    
 </head>
 <body>
-
+<?php include 'design.php';?>
   <header>
   <h2>X company</h2>
   <h1 ></h1>  
@@ -34,66 +17,22 @@
  
 </div>
 </header>
-
-    <?php 
-    $nameErr = $passwordErr = "" ;
-    $name = $password = "" ;
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
- if (empty($_POST["name"])) {
-    $nameErr = "Name is required and must be from letters, dashes, spaces and must not start with dash";
-  } 
-  elseif(strlen($name)<= 2) {
-     $name = test_input($_POST["name"]);
-    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)){
-    $nameErr = "Name must be from letters, dashes, spaces and must not start with dash";
-
-}
-  }
- if(!empty($_POST["password"])) {
-    $password = test_input($_POST["password"]);
-    
-    if (strlen($_POST["password"]) <= '8') {
-        $passwordErr = "Your Password Must Contain At Least 8 Characters!";
-    }
-   
-     elseif (!preg_match("/\W/",$password )) {
-      $passwordErr = "Password must contain At Least 1 special charecter!";
-    }
-    
-}
-else {
-     $passwordErr = "Please enter password   ";
-}
-  
-   
-}
-
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-    ?>
-
-    <h2>Lab Task 3</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+<div >
+ 
+<form method="post" action="validate.php">
     <fieldset>
         <legend> <b> <font size="5px">Login  </font> </b> </legend>
         <table>
             <tr>
                 <td > User Name   </td>
-                <span class="error"><?php echo $nameErr;?></span>
+                
 
                 <td><input type="text" name="name"/></td>
             </tr>
 
             <tr>
                 <td>Password </td>
-        <br><span class="error"><?php echo $passwordErr;?></span>
+        
                 <td><input type="password" name="password"/></td> <br>
                 
             </tr>
@@ -102,18 +41,12 @@ function test_input($data) {
         <hr>
         <input type="checkbox" name="rm">Remember Me 
         <br><br>
-        <input type="submit" name="submit" value="Submit"> <a href=""> Forgot Password?</a>
+        <input type="submit" name="submit" value="submit"> <a href=""> Forgot Password?</a>
     </fieldset>
     
 </form>
-<?php 
-echo "<br>";
-echo "OUPUT : ";
-echo "<br>";
-echo $name; 
-echo "<br>";
-echo $password; 
- ?>
+</div>
+
 
 <footer>
   <p>Copyright <span>&#169;</span> Ragib Shahriar</p>
@@ -121,7 +54,3 @@ echo $password;
 
 </body>
 </html>
-
-
-
-

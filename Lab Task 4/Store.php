@@ -62,7 +62,7 @@
 <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>Append Data to JSON File using PHP</title>  
+            
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -100,7 +100,7 @@
 </header>
            <br />  
            <div >  
-                <h3 >Append Data to JSON File</h3><br />                 
+                              
                 <form method="post">  
                      <?php   
                      if(isset($error))  
