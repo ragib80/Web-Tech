@@ -1,17 +1,26 @@
 <?php
-  $name="ragib80";
-   $password="123456";
+session_start();
+ 
 if (isset($_POST['submit'])) {
 
-	$getname=$_POST['name'];
-	$getpassword=$_POST['password'];
-	if ($getname==$name and $getpassword==$password) {
+	$username=$_POST['username'];
+	$password=$_POST['password'];
+	$user = ['username'=> $username, 'password'=> $password];
+	$formdata = array(
+			'username'=> $_POST["username"],
+			'password'=> $_POST["password"]
+			);
+
+	$userFile=fopen("info.json", "r");
+	$userData = fread($userFile, filesize('info.json'));
+	$existingdata[]= json_decode($userData, true);
+	if ($username==$username and $password==$password) {
 		if (isset($_POST['rm'])) {
-			setcookie('name',$getname,time()+60*60*7 );
+			setcookie('username',$username,time()+60*60*7 );
 
 		}
 			session_start();
-			$_SESSION['name']=$getname;
+			$_SESSION['username']=$username;
 			header("location: dashBoard.php");
 
 		

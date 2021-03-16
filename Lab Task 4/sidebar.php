@@ -12,7 +12,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #003342;
+  background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -21,7 +21,7 @@
   padding: 10px 18px 8px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #bfbfd9;
+  color: #818181;
   display: block;
 }
 
@@ -40,8 +40,8 @@
 <body>
 
 <div class="sidenav">
-  <a href="#">Dashboard</a>
-  <a href="#">View Profile</a>
+  <a href="dashBoard.php">Dashboard</a>
+  <a href="Profile.php">View Profile</a>
   <a href="#clients">Edit Profile</a>
   <a href="upload.php">Change Profile Picture</a>
   <a href="Change Password.php">Change Password</a>

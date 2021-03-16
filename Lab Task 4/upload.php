@@ -25,7 +25,7 @@ color: red;
   <div class="topnav">
      <?php
 session_start();
-echo "Welcome ". $_SESSION['name'];
+echo "Welcome ". $_SESSION['username'];
 echo " | <a href='logout.php'> Logout </a>" ;
 ?>
  

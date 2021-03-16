@@ -22,7 +22,7 @@
      <?php
       session_start();
 
-echo "Logged in as ". $_SESSION['name'];
+echo "Logged in as ". $_SESSION['username'];
 echo " | <a href='logout.php'> Logout </a>" ;
 ?>
  
@@ -35,7 +35,7 @@ echo " | <a href='logout.php'> Logout </a>" ;
  <div class="main">
     <h1>Welcome <?php 
    
-     echo " ". $_SESSION['name'];
+     echo " ". $_SESSION['username'];
 
     ?></h1>
   </div>

@@ -27,7 +27,7 @@
                 <td > User Name   </td>
                 
 
-                <td><input type="text" name="name"/></td>
+                <td><input type="text" name="username"/></td>
             </tr>
 
             <tr>
@@ -41,7 +41,7 @@
         <hr>
         <input type="checkbox" name="rm">Remember Me 
         <br><br>
-        <input type="submit" name="submit" value="submit"> <a href=""> Forgot Password?</a>
+        <input type="submit" name="submit" value="submit"> <a href="forgetPassword.php"> Forgot Password?</a>
     </fieldset>
     
 </form>

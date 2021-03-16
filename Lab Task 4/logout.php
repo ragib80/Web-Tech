@@ -7,13 +7,12 @@
 <?php include 'design.php';?>
   <header>
   <h2>X company</h2>
-  <h1 ></h1>  
-  <?php
+  <h1 ></h1> 
+<?php
 session_start();
 session_destroy();
 echo "Logout Sucessful.<br> click here to <a href='login.php'> Login again </a> ";
 ?>
- 
 </div>
 </header>
 <div >
@@ -23,4 +22,3 @@ echo "Logout Sucessful.<br> click here to <a href='login.php'> Login again </a> 
 </footer>
 </body>
 </html>
-
