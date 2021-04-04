@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
   $password=$_POST['password'];
 
 
-  $email_sch="SELECT * FROM users WHERE email='$email' ";
+  $email_sch="SELECT * FROM users WHERE email='$email' AND password='$password' ";
 
   
 
