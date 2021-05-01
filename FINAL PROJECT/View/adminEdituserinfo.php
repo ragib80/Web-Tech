@@ -22,7 +22,7 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
  
 </div>
 </header>
-  <?php include 'sidebar.php';?>
+  <?php include 'adminSidebar.php';?>
 
   
 </div>

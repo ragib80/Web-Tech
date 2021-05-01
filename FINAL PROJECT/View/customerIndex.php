@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Manager Index</title>
+    <title>Customer Index</title>
    
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -16,16 +16,16 @@
 </head>
 <body>
 <?php
-include 'header.php';
+include 'managerHeader.php';
 ?>
 <div id="main-content" class="main">
-    <br><h2>Manager Index</h2>
+    <br><h2>Customer Index</h2>
      
       
 
     <?php
-    $conn=mysqli_connect("localhost","root","","manager") or die("failed");
-    $sql="SELECT * FROM users";
+    $conn=mysqli_connect("localhost","root","","customer") or die("failed");
+    $sql="SELECT * FROM user";
     $result=mysqli_query($conn, $sql) or die("query failed");
 
     if (mysqli_num_rows($result)>0) {
@@ -34,8 +34,10 @@ include 'header.php';
         <thead>
         <th>Id</th>
         <th>Name</th>
-        <th>User name</th>
+        <th>Phone no</th>
       <th>Email</th>
+      <th>Gender </th>
+    <th>Date of Birth</th>
        
         </thead>
         <tbody>
@@ -45,14 +47,16 @@ include 'header.php';
             <tr>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['name']; ?></td>
-                <td><?php echo $row['username']; ?></td>
+                <td><?php echo $row['pnum']; ?></td>
                 <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['gender']; ?></td>
+                <td><?php echo $row['dateofbirth']; ?></td>
 
                 
                 
                 <td>
-                    <a class="btn btn-info" href='edit-inlineManager.php?id=<?php echo $row['id']; ?>'>Edit</a>
-                    <a class="btn btn-danger" href='delete-inlineManager.php?id=<?php echo $row['id']; ?>'>Delete</a>
+                    <a class="btn btn-info" href='edit-inlineCustomer.php?id=<?php echo $row['id']; ?>'>Edit</a>
+                    <a class="btn btn-danger" href='delete-inlineCustomer.php?id=<?php echo $row['id']; ?>'>Delete</a>
                 </td>
             </tr>
             <?php } ?>

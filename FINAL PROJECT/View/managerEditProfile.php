@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <?php include 'design.php';?>
+  <?php include 'managerDesign.php';?>
   <header>
   <h2>GG Clothing</h2>
   <h1 ></h1>  
@@ -28,14 +28,14 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
  
 </div>
 </header>
-  <?php include 'sidebar.php';?>
+  <?php include 'managerSidebarr.php';?>
 
   
 </div>
 
 <div class="main">
     <h2>Edit Profile Info</h2>
-    <?php include 'adminDbcon.php';?>
+    <?php include 'managerDbcon.php';?>
     <?php
 
       $email=$_SESSION['email'];
@@ -73,8 +73,8 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
                  <td><?php echo $row['email']; ?></td>
                 
             <td>
-                    <a class="btn btn-info" href='adminEdituserinfo.php?id=<?php echo $row['id']; ?>'>Edit Profile</a> <br>
-                    <a class="btn btn-secondary" href='adminChangePassword.php?id=<?php echo $row['id']; ?>'>Chnage Password</a>
+                    <a class="btn btn-info" href='managerEdituserinfo.php?id=<?php echo $row['id']; ?>'>Edit Profile</a> <br>
+                    <a class="btn btn-secondary" href='managerChangePassword.php?id=<?php echo $row['id']; ?>'>Chnage Password</a>
                 </td>
             </tr>
            <?php }

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<header>
- <?php include 'design.php';?>
+ <?php include 'managerDesign.php';?>
  <div class="topnav">
 	<?php
 session_start();

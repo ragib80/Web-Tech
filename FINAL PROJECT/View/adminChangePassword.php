@@ -26,13 +26,13 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
  
 </div>
 </header>
-  <?php include 'sidebar.php';?>
+  <?php include 'adminSidebar.php';?>
 
   
 </div>
 <div class="main">
      <h2>Change Password</h2>
-     <?php include 'managerDbcon.php';?>
+     <?php include 'adminDbcon.php';?>
     <?php 
     $user_id=$_GET['id'];
     $sql="SELECT * FROM users WHERE id={$user_id}";
@@ -44,7 +44,7 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
       while ($row=mysqli_fetch_assoc($result)) {
     
     ?>
-    <form class="post-form" action="managerChangePasswordValidate.php" method="post">
+    <form class="post-form" action="adminChangePasswordValidate.php" method="post">
 
        <table>
     

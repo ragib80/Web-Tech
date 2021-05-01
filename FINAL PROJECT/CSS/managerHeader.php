@@ -11,14 +11,14 @@
  
 </head>
 <body>
-    <?php include 'design.php' ?>
+    <?php include 'managerDesign.php' ?>
       <header>
   <h2>GG CLOATHING</h2>
   <h1 ></h1>  
   
   
 </header>
-  <?php include 'sidebar.php' ?>
+  <?php include 'managerSidebar.php' ?>
 
 </body>
 </html>

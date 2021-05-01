@@ -45,7 +45,7 @@
   <a href="managerEditProfile.php">Edit Profile </a><br>
   <a href="customerIndex.php">Customer Index </a><br>
   <a href="../Product/index.php">Product index</a><br>
-  <a href="logout.php">Log out</a><br>
+  <a href="managerLogout.php">Log out</a><br>
 
 </div>
 

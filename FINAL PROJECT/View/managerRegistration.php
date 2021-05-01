@@ -129,7 +129,7 @@
    </script>
       </head>  
       <body>  
-<?php include 'design.php';?>
+<?php include 'managerDesign.php';?>
 
          <header>
   <h2>GG Clothing</h2>

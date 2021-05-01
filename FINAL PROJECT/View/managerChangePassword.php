@@ -1,10 +1,14 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title></title>
 </head>
 <body>
-     <?php include 'design.php';?>
+     <?php include 'managerDesign.php';?>
   <header>
   <h2>GG Clothing</h2>
   <h1 ></h1>  
@@ -22,15 +26,15 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
  
 </div>
 </header>
-  <?php include 'sidebar.php';?>
+  <?php include 'managerSidebar.php';?>
 
   
 </div>
-<div id="main-content" class="main">
-    <h2>Update Record</h2>
+<div class="main">
+     <h2>Change Password</h2>
      <?php include 'managerDbcon.php';?>
     <?php 
-     $user_id=$_GET['id'];
+    $user_id=$_GET['id'];
     $sql="SELECT * FROM users WHERE id={$user_id}";
     $result=mysqli_query($con, $sql) or die("query failed");
 
@@ -40,37 +44,37 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
       while ($row=mysqli_fetch_assoc($result)) {
     
     ?>
-    <form class="post-form" action="managerEditedData.php" method="post">
+    <form class="post-form" action="managerChangePasswordValidate.php" method="post">
+
        <table>
     
       <tr >
 
-        <td >Name</td>
+        <td>Name</td>
         <input type="hidden" name="id" value="<?php echo $row['id'];?>"/>
 
         <td  > <input type="text" name="name" value="<?php echo $row['name'];?>"/></td>
        
          
       </tr>
-
-        <tr>
-        <td > User Name   </td>
-       
-
-        <td><input type="text" name="username" value="<?php echo $row['username'];?>"/></td>
-          
-      </tr>   
+ 
+         
+ <tr>
+        <td>New Password </td>
+        
+        <td><input type="password" name="new_password"/></td> <br>
+        
+      </tr>
 
       <tr>
-        <td>Email</td>
-
-        <td><input type="text" name="email" value="<?php echo $row['email'];?>"/></td>
-        
+        <td>Confrim Password </td>
+       
+        <td><input type="password" name="con_password"/></td> <br>
       </tr>
      
 
     </table>
-      <input class="btn btn-info" type="submit" value="Update"/>
+      <input class="btn btn-secondary" type="submit" name="submit" value="Submit"> 
     </form>
     <?php } 
       }
@@ -83,3 +87,11 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
 </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+

@@ -18,7 +18,7 @@
   
   
 </header>
-  <?php include 'sidebar.php' ?>
+  <?php include 'adminSidebar.php' ?>
 
 </body>
 </html>

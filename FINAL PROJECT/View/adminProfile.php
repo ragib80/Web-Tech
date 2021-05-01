@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VIEW PROFILE</title>
-    <meta charset="utf-8">
+	<title>PROFILE</title>
+	  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -28,14 +28,14 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
  
 </div>
 </header>
-  <?php include 'sidebar.php';?>
+  <?php include 'adminSidebar.php';?>
 
   
 </div>
 
 <div class="main">
-    <h2>Edit Profile Info</h2>
-    <?php include 'managerDbcon.php';?>
+    <h2> Admin PROFILE info</h2><br>
+    <?php include 'adminDbcon.php';?>
     <?php
 
       $email=$_SESSION['email'];
@@ -51,7 +51,7 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
     ?>
     <table cellpadding="7px" class="table table-striped">
         <thead>
-          <th rowspan=8 align="center">ID</th>
+        	<th rowspan=8 align="center">ID</th>
 
         <th>Name</th>
         <th>User Name</th>
@@ -60,11 +60,11 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
        
         </thead>
         <tbody>
-          
-          
-            <?php
-          while($row=mysqli_fetch_assoc($query)){
-            ?>
+        	
+        	
+       	    <?php
+        	while($row=mysqli_fetch_assoc($query)){
+       	    ?>
             <tr>
          
       <td><?php echo $row['id']; ?></td>
@@ -72,10 +72,7 @@ echo " | <a class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
                 <td><?php echo $row['username']; ?></td>
                  <td><?php echo $row['email']; ?></td>
                 
-            <td>
-                    <a class="btn btn-info" href='managerEdituserinfo.php?id=<?php echo $row['id']; ?>'>Edit Profile</a> <br>
-                    <a class="btn btn-secondary" href='managerChangePassword.php?id=<?php echo $row['id']; ?>'>Chnage Password</a>
-                </td>
+            
             </tr>
            <?php }
        }

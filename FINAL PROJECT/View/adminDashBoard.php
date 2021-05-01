@@ -26,7 +26,7 @@ session_start();
       if (!isset($_SESSION['email']) ) { 
 
     
-    header("Location: managerLogin.php");
+    header("Location: adminLogin.php");
     exit(); 
 
 }
@@ -42,7 +42,7 @@ echo " | <a  class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
  
 </div>
 </header>
-  <?php include 'sidebar.php';?>
+  <?php include 'adminSidebar.php';?>
 
   
 </div>

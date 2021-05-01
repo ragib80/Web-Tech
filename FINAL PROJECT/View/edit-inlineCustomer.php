@@ -5,7 +5,7 @@
    
 </head>
 <body>
-<?php include 'header.php'; ?>
+<?php include 'managerHeader.php'; ?>
 
 <div id="main-content" class="main">
     <br><h2>Edit Customer details</h2> <hr>

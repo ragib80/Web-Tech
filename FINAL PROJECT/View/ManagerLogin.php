@@ -66,7 +66,7 @@ session_start();
    </script> 
 </head>
 <body>
-<?php include 'design.php';?>
+<?php include 'managerDesign.php';?>
 
 
 

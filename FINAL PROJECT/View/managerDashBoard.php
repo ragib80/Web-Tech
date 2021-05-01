@@ -16,7 +16,7 @@ session_start();
 </head>
 <body>
  
-   <?php include 'design.php';?>
+   <?php include 'managerDesign.php';?>
   <header>
   <h2>GG Clothing</h2>
   <h1 ></h1>  
@@ -26,7 +26,7 @@ session_start();
       if (!isset($_SESSION['email']) ) { 
 
     
-    header("Location: adminLogin.php");
+    header("Location: managerLogin.php");
     exit(); 
 
 }
@@ -42,7 +42,7 @@ echo " | <a  class='btn btn-outline-danger' href='logout.php'> Logout </a>" ;
  
 </div>
 </header>
-  <?php include 'sidebar.php';?>
+  <?php include 'managerSidebar.php';?>
 
   
 </div>
